@@ -2,8 +2,8 @@
 #Repository with all necessary components to DEPLOY the APP on AWS
 
 # Instructions
-- git clone the repo
-- cd <repo dir>
+- git clone https://github.com/ManasseTegGbegnohou/projetImmoAWS.git
+- cd projetImmoAWS
 
 # Give Execution Permits
 - chmod +x update_env.sh
