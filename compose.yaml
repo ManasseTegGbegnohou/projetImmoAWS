@@ -1,0 +1,58 @@
+version: '3.8'
+
+services:
+  frontend:
+    image: projetimmo/frontend:${FRONTEND_VERSION:-latest}
+    build:
+      context: ./ProjetImmo_FE
+      args:
+        - VITE_API_URL=${VITE_API_URL}
+    ports:
+      - "80:80"
+    environment:
+      - VITE_API_URL=${VITE_API_URL}
+    networks:
+      - immo-network
+
+  backend:
+    image: projetimmo/backend:${BACKEND_VERSION:-latest}
+    container_name: projetimmo-backend
+    build:
+      context: ./ProjetImmo_BE
+    ports:
+      - "${API_PORT}:${API_PORT}"
+    networks:
+      - immo-network
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mariadb://mariadb:3306/bdimmo
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=dbpassword
+      - SERVER_PORT=${API_PORT}
+      - SPRING_DATASOURCE_DRIVER-CLASS-NAME=org.mariadb.jdbc.Driver
+    depends_on:
+      mariadb:
+        condition: service_healthy
+
+  mariadb:
+    image: projetimmo/mariadb:${MARIADB_VERSION:-latest}
+    build:
+      context: ./seed
+    networks:
+      - immo-network
+    ports:
+      - "3306:3306"
+    volumes:
+      - db:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      start_period: 5s
+      interval: 5s
+      timeout: 5s
+      retries: 3
+
+volumes:
+  db:
+
+networks:
+  immo-network:
+    driver: bridge

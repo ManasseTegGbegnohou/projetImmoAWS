@@ -4,6 +4,8 @@ WORKDIR /usr/src
 COPY package*.json ./
 RUN ["npm", "i"]
 COPY . .
+ARG VITE_API_URL
+ENV VITE_API_URL=$VITE_API_URL
 RUN ["npm", "run", "build"]
 
 # STAGE 2 : WEB SERVER
