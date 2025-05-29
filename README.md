@@ -1,7 +1,7 @@
 # projetImmoAWS (Work In Progress)
 #Repository with all necessary components to DEPLOY the APP on AWS
 
-# Instructions
+# Instructions (Outdated)
 - git clone https://github.com/ManasseTegGbegnohou/projetImmoAWS.git
 - cd projetImmoAWS
 
