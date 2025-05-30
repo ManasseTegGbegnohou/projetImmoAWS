@@ -1,11 +1,11 @@
-# projetImmoAWS
+# projetImmoAWS (Work In Progress)
 #Repository with all necessary components to DEPLOY the APP on AWS
 
-# Instructions
+# Instructions (Outdated)
 - git clone https://github.com/ManasseTegGbegnohou/projetImmoAWS.git
 - cd projetImmoAWS
 
-# Give Execution Permits
+# Give Execution Permits (To Be Updated)
 - chmod +x update_env.sh
 - ./update_env.sh
 - docker compose up -d
