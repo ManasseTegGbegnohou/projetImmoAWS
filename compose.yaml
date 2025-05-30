@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   frontend:
-    image: projetimmo/frontend:${FRONTEND_VERSION:-latest}
+    image: manacccc/projet-immo-fe:${FRONTEND_VERSION:-latest}
     build:
       context: ./ProjetImmo_FE
       args:
@@ -15,7 +15,7 @@ services:
       - immo-network
 
   backend:
-    image: projetimmo/backend:${BACKEND_VERSION:-latest}
+    image: manacccc/projet-immo-be:${BACKEND_VERSION:-latest}
     container_name: projetimmo-backend
     build:
       context: ./ProjetImmo_BE
@@ -34,7 +34,7 @@ services:
         condition: service_healthy
 
   mariadb:
-    image: projetimmo/mariadb:${MARIADB_VERSION:-latest}
+    image: manacccc/projet-immo-bd:${MARIADB_VERSION:-latest}
     build:
       context: ./seed
     networks:
