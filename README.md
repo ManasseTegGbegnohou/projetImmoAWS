@@ -4,4 +4,4 @@
 
 - [Wiki](https://github.com/ManasseTegGbegnohou/projetImmo-AWS-services/wiki)
 ---
-> ⚠️ This repository is a work in progress. AWS deployment is currently in the testing phase.
+> ⚠️ This repository is a work in progress.
