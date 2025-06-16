@@ -1,6 +1,6 @@
 # projetImmoAWS (Work In Progress)
 
-## Repository containing the `Dockerfile`, `compose.yaml`, and all necessary components to **deploy the application on AWS EC2**.
+## Repository containing all the necessary `network` and `containers` configuration to **deploy the application on AWS EC2**.
 
 - [Wiki](https://github.com/ManasseTegGbegnohou/projetImmo-AWS-services/wiki)
 - [Terraform AWS Infrastructure](https://github.com/ManasseTegGbegnohou/projetImmo-AWS-IaC.git)
