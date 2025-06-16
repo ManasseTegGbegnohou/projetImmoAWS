@@ -1,36 +1,36 @@
 # projetImmoAWS (Work In Progress)
 
-## Repository contenant le `Dockerfile`, le `docker-compose.yaml` et tous les composants nécessaires pour **déployer l'application sur AWS EC2**.
+## Repository containing the `Dockerfile`, `compose.yaml`, and all necessary components to **deploy the application on AWS EC2**.
 
 ---
 
-## Description du projet
+## Project Description
 
-J'ai voulu me challenger personnellement en remodélisant un projet scolaire afin qu’il soit **compatible avec les instances EC2 d’AWS**.
+I wanted to challenge myself by reworking a school project to make it **compatible with AWS EC2 instances**.
 
-Le projet original avait pour objectif de créer une application web développée avec **React**, connectée à une base de données **SQL** à l’aide d’un backend **Java**, permettant aux utilisateurs de consulter et de naviguer à travers différentes pages web et maisons affichées.  
-L'objectif principal était de démontrer la capacité à construire une application fonctionnelle en suivant les principes du *Minimum Viable Product* (MVP).
-
----
-
-### Les fonctionnalités principales incluent :
-- Navigation des maisons listées sous forme de galerie  
-- Navigation des maisons listées sur une carte  
-- Consultation des détails d’une maison  
-- Création d’un compte / Connexion à un compte  
-- Ajout de maisons aux favoris  
-- Navigation dans les maisons favorites
+The original project aimed to create a web application built with **React**, connected to a **SQL** database via a **Java** backend. It allows users to browse and view various web pages and listed houses.  
+The main objective was to demonstrate the ability to build a functional application by following *Minimum Viable Product* (MVP) principles.
 
 ---
 
-### Librairies utilisées :
+### Main features include:
+- Browse listed houses in a gallery view  
+- Browse listed houses on a map  
+- View detailed information about a house  
+- Create an account / Log into an account  
+- Add houses to favorites  
+- Browse favorite houses
+
+---
+
+### Libraries used:
 - **Bootstrap** v5.0.2  
-- **@types/react-router-dom** : `npm i @types/react-router-dom`  
-- **Axios** : `npm i axios`  
+- **@types/react-router-dom**: `npm i @types/react-router-dom`  
+- **Axios**: `npm i axios`  
 - **React**  
 - **Vite**  
 - *Etc.*
 
 ---
 
-> ⚠️ Ce dépôt est en cours de développement. Le déploiement sur AWS est en phase de test.
+> ⚠️ This repository is a work in progress. AWS deployment is currently in the testing phase.
