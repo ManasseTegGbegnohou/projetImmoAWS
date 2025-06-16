@@ -1,8 +1,5 @@
 services:
   frontend:
-    build:
-      context: ./ProjetImmo_FE
-      dockerfile: Dockerfile
     image: manacccc/projet-immo-fe:${FRONTEND_VERSION:-latest}
     container_name: projetimmo-frontend
     restart: unless-stopped
@@ -17,9 +14,6 @@ services:
       - "traefik.http.services.frontend.loadbalancer.server.port=80"
 
   backend:
-    build:
-      context: ./ProjetImmo_BE
-      dockerfile: Dockerfile
     image: manacccc/projet-immo-be:${BACKEND_VERSION:-latest}
     container_name: projetimmo-backend
     restart: unless-stopped
@@ -41,9 +35,6 @@ services:
       - "traefik.http.services.backend.loadbalancer.server.port=8888"
 
   mariadb:
-    build:
-      context: ./seed
-      dockerfile: Dockerfile
     image: manacccc/projet-immo-bd:${MARIADB_VERSION:-latest}
     container_name: maria-db
     restart: unless-stopped
